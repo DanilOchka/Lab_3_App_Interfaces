@@ -37,7 +37,7 @@ namespace Lab_3_App
         //зміна орієнатції вмісту елементів при зменшенні ширини вікна
         private void MainWindow_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            if (e.NewSize.Width < 520)
+            if (e.NewSize.Width < 521)
             {
                 MainStackPanel.Orientation = Orientation.Vertical;
                 Height = 750;
@@ -45,6 +45,8 @@ namespace Lab_3_App
             else
             {
                 MainStackPanel.Orientation = Orientation.Horizontal;
+                
+
             }
         }
 
@@ -135,7 +137,12 @@ namespace Lab_3_App
                 border.Width = minWidthMedium;
                 border.Height = minHeightMedium;
             }
-            else if (windowHeight < 540 && windowWidth < 540)
+            else if (windowWidth < 540)
+            {
+                border.Width = minWidthSmall;
+                border.Height = minHeightSmall;
+            }
+            else if (windowHeight < 540)
             {
                 border.Width = minWidthSmall;
                 border.Height = minHeightSmall;
