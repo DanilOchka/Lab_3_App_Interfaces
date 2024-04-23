@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab_3_App"
         mc:Ignorable="d"
-        Title="MainWindow" Height="480" Width="600" MinWidth="350" MinHeight="440"
+        Title="MainWindow" Height="480" Width="600" MinWidth="350" MinHeight="460"
         SizeChanged="Font_SizeChanged">
 
       

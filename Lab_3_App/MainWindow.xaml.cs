@@ -37,7 +37,7 @@ namespace Lab_3_App
         //зміна орієнатції вмісту елементів при зменшенні ширини вікна
         private void MainWindow_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            if (e.NewSize.Width < 525)
+            if (e.NewSize.Width < 520)
             {
                 MainStackPanel.Orientation = Orientation.Vertical;
                 Height = 750;
@@ -111,17 +111,18 @@ namespace Lab_3_App
             
 
 
-            double minWidthSmall = 520; // Мінімальна ширина для малих розмірів бордера
+            double minWidthSmall = 500; // Мінімальна ширина для малих розмірів бордера
             double minHeightSmall = 400; // Мінімальна висота для малих розмірів бордера
 
-            double minWidthMedium = 540; // Мінімальна ширина для середніх розмірів бордера
+            double minWidthMedium = 520; // Мінімальна ширина для середніх розмірів бордера
             double minHeightMedium = 450; // Мінімальна висота для середніх розмірів бордера
 
             double minWidthLarge = 620; // Мінімальна ширина для великих розмірів бордера
-            double minHeightLarge = 500; // Мінімальна висота для великих розмірів бордера
+            double minHeightLarge = 520; // Мінімальна висота для великих розмірів бордера
 
             // Отримуємо розмір вікна
             double windowHeight = this.ActualHeight;
+            double windowWidth = this.ActualWidth;
 
             // Змінюємо розмір бордера в залежності від ширини вікна
             if (windowHeight > 600)
@@ -134,7 +135,7 @@ namespace Lab_3_App
                 border.Width = minWidthMedium;
                 border.Height = minHeightMedium;
             }
-            else if (windowHeight < 540)
+            else if (windowHeight < 540 && windowWidth < 540)
             {
                 border.Width = minWidthSmall;
                 border.Height = minHeightSmall;
